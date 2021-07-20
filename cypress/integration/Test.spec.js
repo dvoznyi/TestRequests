@@ -11,7 +11,12 @@ it('dvTest', () => {
         console.log(textResp)
         cy.log(textResp)
         expect(response.body).to.have.property('name', 'Katya') // true 
-        expect(response.body).to.have.property('status', 'unavailable') //проверки шо  я сделал
-        //expect(response.body).to.have.property('tags[0].name', 'firstTag') //не получается
+        expect(response.body).to.have.property('status', 'unavailable');
+        //expect(response.body).to.have.property('tags', 'firstTag') //не получается     
+        expect(response).property('status').to.equal(200);
+        expect(response.body).property('id').to.not.be.oneOf([null, ""]);
+           let petid = response.body.id
+           cy.request('GET', `${config.baseURL}/pet`)
+           
     })
     })
