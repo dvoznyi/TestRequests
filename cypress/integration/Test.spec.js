@@ -12,11 +12,12 @@ it('dvTest', () => {
         cy.log(textResp)
         expect(response.body).to.have.property('name', 'Katya') // true 
         expect(response.body).to.have.property('status', 'unavailable');
-        //expect(response.body).to.have.property('tags', 'firstTag') //не получается     
+        //expect(response.body).to.have.property('tags', 'firstTag') //не получается
         expect(response).property('status').to.equal(200);
         expect(response.body).property('id').to.not.be.oneOf([null, ""]);
            let petid = response.body.id
-           cy.request('GET', `${config.baseURL}/pet`)
-           
+           cy.request('GET', `${config.baseURL}/pet`) // тут не правильный эндпоинт, посмотри в документации
+                                                    //тебе нужно сделать такую же конструкцию как в 9 строке: cy.request(...).then((response) => {}
+
     })
     })
