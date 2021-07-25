@@ -1,23 +1,23 @@
 {
-    "id": 0,
+    "id": 1488,
     "category": {
       "id": 0,
       "name": "string"
     },
-    "name": "doggie",
+    "name": "Dima",
     "photoUrls": [
       "string"
     ],
     "tags": [
       {
         "id": 0,
-        "name": "string"
+        "name": "firstTag"
       },
            {
         "id": 1,
-        "name": "string"
+        "name": "secondTag"
       }
   
     ],
-    "status": "unavailable"
+    "status": "available"
   }
