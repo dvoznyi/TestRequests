@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "cy:run": "cypress run",
+        "cy:runChrome": "cypress run --browser chrome",
+        "cy:open": "cypress open"
+    },
+    "name": "dimon",
+    "devDependencies": {
+        "cypress": "^8.2.0"
+    }
+}
